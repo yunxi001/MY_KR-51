@@ -1,0 +1,73 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/22/2024  14:25:40  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\51AND32\AZWZ\C51\BIN\BL51.EXE .\Objects\led-1-2.obj TO .\Objects\led-1-2 PRINT (.\Listings\led-1-2.m51) RAMSIZE (256)
+>> 
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\led-1-2.obj (LED_1_2)
+  D:\51AND32\AZWZ\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\led-1-2 (LED_1_2)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000CH     UNIT         ?C_C51STARTUP
+            CODE    080CH     0005H     UNIT         ?PR?MAIN?LED_1_2
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\led-1-2 (LED_1_2)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED_1_2
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\led-1-2 (LED_1_2)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED_1_2
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:080CH         PUBLIC        main
+  -------         PROC          MAIN
+  C:080CH         LINE#         2
+  C:080CH         LINE#         3
+  C:080CH         LINE#         5
+  C:080CH         LINE#         6
+  C:080CH         LINE#         7
+  C:080FH         LINE#         9
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/22/2024  14:25:40  PAGE 2
+
+
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED_1_2
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0005H BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=20
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

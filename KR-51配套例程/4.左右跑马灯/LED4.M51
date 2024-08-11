@@ -1,0 +1,110 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/04/2015  15:23:10  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE LED4.obj TO LED4 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  LED4.obj (LED4)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  LED4 (LED4)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         ?DT?LED4
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0033H     UNIT         ?PR?MAIN?LED4
+            CODE    0036H     001CH     UNIT         ?PR?_DELAY?LED4
+            CODE    0052H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   LED4 (LED4)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED4
+
+?PR?MAIN?LED4
+  +--> ?PR?_DELAY?LED4
+
+
+
+SYMBOL TABLE OF MODULE:  LED4 (LED4)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED4
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:003DH         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  C:0003H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/04/2015  15:23:10  PAGE 2
+
+
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:0008H         PUBLIC        LED
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          L?0019
+  -------         ENDPROC       L?0019
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  -------         DO            
+  D:0005H         SYMBOL        j
+  -------         ENDDO         
+  C:003DH         LINE#         23
+  C:003DH         LINE#         24
+  C:003DH         LINE#         26
+  C:0046H         LINE#         27
+  C:0051H         LINE#         29
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         36
+  C:0003H         LINE#         37
+  C:0003H         LINE#         40
+  C:0003H         LINE#         41
+  C:0006H         LINE#         43
+  C:0008H         LINE#         44
+  C:0008H         LINE#         45
+  C:0008H         LINE#         46
+  C:000BH         LINE#         47
+  C:0011H         LINE#         48
+  C:0014H         LINE#         49
+  C:001AH         LINE#         50
+  C:001EH         LINE#         52
+  C:0026H         LINE#         53
+  C:0026H         LINE#         55
+  C:0026H         LINE#         56
+  C:0029H         LINE#         57
+  C:0030H         LINE#         58
+  C:0033H         LINE#         60
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED4
+
+Program Size: data=10.0 xdata=0 code=94
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

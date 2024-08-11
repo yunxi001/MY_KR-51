@@ -1,0 +1,137 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/08/2021  11:11:18  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+F:\KEIL_V5\C51\BIN\BL51.EXE di di baojing.obj TO di di baojing
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  di di baojing.obj (DI_DI_BAOJING)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  di di baojing (DI_DI_BAOJING)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?DI_DI_BAOJING
+                    000AH     0016H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         ?BI?DI_DI_BAOJING
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+                    000EH     07F2H                  *** GAP ***
+            CODE    0800H     002AH     UNIT         ?PR?MAIN?DI_DI_BAOJING
+            CODE    082AH     002AH     UNIT         ?PR?TIME0?DI_DI_BAOJING
+            CODE    0854H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   di di baojing (DI_DI_BAOJING)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?DI_DI_BAOJING
+
+
+
+SYMBOL TABLE OF MODULE:  di di baojing (DI_DI_BAOJING)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DI_DI_BAOJING
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/08/2021  11:11:18  PAGE 2
+
+
+  B:00A8H.7       PUBLIC        EA
+  B:0020H.0       PUBLIC        flag
+  B:00A0H.5       PUBLIC        BEEP
+  C:0800H         PUBLIC        main
+  D:0089H         PUBLIC        TMOD
+  D:0008H         PUBLIC        Count1
+  D:0009H         PUBLIC        Count2
+  C:082AH         PUBLIC        Time0
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  B:00B0H.5       PUBLIC        K1
+  B:00B0H.2       PUBLIC        K2
+  -------         PROC          MAIN
+  C:0800H         LINE#         23
+  C:0800H         LINE#         24
+  C:0800H         LINE#         25
+  C:0803H         LINE#         26
+  C:0805H         LINE#         27
+  C:0807H         LINE#         28
+  C:0809H         LINE#         29
+  C:080BH         LINE#         30
+  C:080EH         LINE#         31
+  C:0811H         LINE#         32
+  C:0814H         LINE#         33
+  C:0816H         LINE#         34
+  C:0818H         LINE#         36
+  C:0818H         LINE#         37
+  C:0818H         LINE#         38
+  C:081BH         LINE#         39
+  C:081BH         LINE#         40
+  C:081EH         LINE#         41
+  C:0820H         LINE#         42
+  C:0820H         LINE#         43
+  C:0823H         LINE#         44
+  C:0823H         LINE#         45
+  C:0826H         LINE#         46
+  C:0828H         LINE#         47
+  C:0828H         LINE#         48
+  -------         ENDPROC       MAIN
+  -------         PROC          TIME0
+  C:082AH         LINE#         54
+  C:082EH         LINE#         56
+  C:0831H         LINE#         57
+  C:0834H         LINE#         58
+  C:0836H         LINE#         59
+  C:083BH         LINE#         60
+  C:083BH         LINE#         61
+  C:083DH         LINE#         62
+  C:0842H         LINE#         63
+  C:0842H         LINE#         64
+  C:0845H         LINE#         65
+  C:0848H         LINE#         66
+  C:084AH         LINE#         67
+  C:084AH         LINE#         68
+  C:084AH         LINE#         69
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/08/2021  11:11:18  PAGE 3
+
+
+  C:084DH         LINE#         70
+  C:084DH         LINE#         71
+  C:084FH         LINE#         72
+  C:084FH         LINE#         74
+  -------         ENDPROC       TIME0
+  -------         ENDMOD        DI_DI_BAOJING
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0057H BYTE ( 4%) *
+******************************************************************************
+
+Program Size: data=11.1 xdata=0 code=102
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

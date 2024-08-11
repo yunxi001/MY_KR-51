@@ -1,0 +1,101 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/17/2022  19:55:45  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KR-51\51RG\KEIL5 C51\KEIL51\C51\BIN\BL51.EXE .\Objects\¶ÀÁ¢°´¼ü¿ØÖÆled×´Ì¬-1.obj TO .\Objects\¶ÀÁ¢°´¼ü¿ØÖÆled×´Ì¬-1 P
+>> RINT (.\Listings\¶ÀÁ¢°´¼ü¿ØÖÆled×´Ì¬-1.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\¶ÀÁ¢°´¼ü¿ØÖÆled×´Ì¬-1.obj (____________LED_____1)
+  D:\KR-51\51RG\KEIL5 C51\KEIL51\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\¶ÀÁ¢°´¼ü¿ØÖÆled×´Ì¬-1 (____________LED_____1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0019H     UNIT         ?PR?_DELAY?____________LED_____1
+            CODE    001CH     0017H     UNIT         ?PR?MAIN?____________LED_____1
+            CODE    0033H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\¶ÀÁ¢°´¼ü¿ØÖÆled×´Ì¬-1 (____________LED_____1)
+
+
+SEGMENT                                    DATA_GROUP 
+  +--> CALLED SEGMENT                    START    LENGTH
+--------------------------------------------------------
+?C_C51STARTUP                            -----    -----
+  +--> ?PR?MAIN?____________LED_____1
+
+?PR?MAIN?____________LED_____1           -----    -----
+  +--> ?PR?_DELAY?____________LED_____1
+
+?PR?_DELAY?____________LED_____1         0008H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\¶ÀÁ¢°´¼ü¿ØÖÆled×´Ì¬-1 (____________LED_____1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ____________LED_____1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:0090H.0       PUBLIC        P1_0
+  C:0003H         PUBLIC        _delay
+  B:00B0H.5       PUBLIC        P3_5
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/17/2022  19:55:45  PAGE 2
+
+
+  C:001CH         PUBLIC        main
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:0009H         SYMBOL        j
+  -------         ENDDO         
+  C:0003H         LINE#         3
+  C:0003H         LINE#         4
+  C:0003H         LINE#         5
+  C:0007H         LINE#         6
+  C:0007H         LINE#         9
+  C:0008H         LINE#         10
+  C:000BH         LINE#         11
+  C:000EH         LINE#         13
+  C:000EH         LINE#         14
+  C:0011H         LINE#         15
+  C:0014H         LINE#         16
+  C:0019H         LINE#         17
+  C:001BH         LINE#         19
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:001CH         LINE#         20
+  C:001CH         LINE#         21
+  C:001CH         LINE#         22
+  C:001FH         LINE#         23
+  C:001FH         LINE#         24
+  C:0026H         LINE#         25
+  C:0029H         LINE#         26
+  C:0030H         LINE#         27
+  C:0032H         LINE#         28
+  C:0032H         LINE#         30
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        ____________LED_____1
+
+Program Size: data=11.0 xdata=0 code=63
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,115 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/17/2022  15:18:31  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KR-51\51RG\KEIL5 C51\KEIL51\C51\BIN\BL51.EXE .\Objects\led流水灯plus-1.obj TO .\Objects\led流水灯plus-1 PRINT (.\List
+>> ings\led流水灯plus-1.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\led流水灯plus-1.obj (LED______PLUS_1)
+  D:\KR-51\51RG\KEIL5 C51\KEIL51\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\led流水灯plus-1 (LED______PLUS_1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0032H     UNIT         ?PR?MAIN?LED______PLUS_1
+            CODE    0035H     001DH     UNIT         ?PR?_DELAY1MS?LED______PLUS_1
+            CODE    0052H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\led流水灯plus-1 (LED______PLUS_1)
+
+
+SEGMENT                                 DATA_GROUP 
+  +--> CALLED SEGMENT                 START    LENGTH
+-----------------------------------------------------
+?C_C51STARTUP                         -----    -----
+  +--> ?PR?MAIN?LED______PLUS_1
+
+?PR?MAIN?LED______PLUS_1              -----    -----
+  +--> ?PR?_DELAY1MS?LED______PLUS_1
+
+?PR?_DELAY1MS?LED______PLUS_1         0008H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\led流水灯plus-1 (LED______PLUS_1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED______PLUS_1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0039H         PUBLIC        _Delay1ms
+  C:0003H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/17/2022  15:18:31  PAGE 2
+
+
+  C:0035H         SYMBOL        L?0014
+  -------         PROC          L?0013
+  -------         ENDPROC       L?0013
+  C:0035H         SYMBOL        L?0014
+  -------         PROC          _DELAY1MS
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:0009H         SYMBOL        j
+  -------         ENDDO         
+  C:0039H         LINE#         3
+  C:0039H         LINE#         4
+  C:0039H         LINE#         5
+  C:003DH         LINE#         6
+  C:003DH         LINE#         9
+  C:003EH         LINE#         10
+  C:0041H         LINE#         11
+  C:0044H         LINE#         13
+  C:0044H         LINE#         14
+  C:0047H         LINE#         15
+  C:004AH         LINE#         16
+  C:004FH         LINE#         17
+  C:0051H         LINE#         19
+  -------         ENDPROC       _DELAY1MS
+  -------         PROC          MAIN
+  C:0003H         LINE#         21
+  C:0003H         LINE#         22
+  C:0003H         LINE#         24
+  C:0003H         LINE#         25
+  C:0003H         LINE#         26
+  C:0006H         LINE#         27
+  C:0009H         LINE#         28
+  C:000CH         LINE#         29
+  C:000FH         LINE#         30
+  C:0012H         LINE#         31
+  C:0015H         LINE#         32
+  C:0018H         LINE#         33
+  C:001BH         LINE#         34
+  C:001EH         LINE#         35
+  C:0021H         LINE#         36
+  C:0024H         LINE#         37
+  C:0027H         LINE#         38
+  C:002AH         LINE#         39
+  C:002DH         LINE#         40
+  C:0030H         LINE#         41
+  C:0033H         LINE#         42
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED______PLUS_1
+
+Program Size: data=11.0 xdata=0 code=94
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

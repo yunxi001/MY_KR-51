@@ -1,0 +1,118 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/04/2015  15:37:32  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE led6.obj TO LED6 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  led6.obj (LED6)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  LED6 (LED6)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     001EH     UNIT         ?PR?_DELAY?LED6
+            CODE    0021H     001EH     UNIT         ?PR?MAIN?LED6
+            CODE    003FH     0015H     UNIT         ?PR?DISPLAY?LED6
+            CODE    0054H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0060H     0007H     UNIT         ?CO?LED6
+
+
+
+OVERLAY MAP OF MODULE:   LED6 (LED6)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?LED6
+
+?PR?MAIN?LED6                  0008H    0002H
+  +--> ?PR?DISPLAY?LED6
+
+?PR?DISPLAY?LED6               -----    -----
+  +--> ?CO?LED6
+  +--> ?PR?_DELAY?LED6
+
+
+
+SYMBOL TABLE OF MODULE:  LED6 (LED6)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED6
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/04/2015  15:37:32  PAGE 2
+
+
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:0060H         PUBLIC        table
+  D:00A8H         PUBLIC        IE
+  C:0003H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  C:0021H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  C:003FH         PUBLIC        display
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  -------         DO            
+  D:0006H         SYMBOL        j
+  D:0004H         SYMBOL        k
+  -------         ENDDO         
+  C:0003H         LINE#         25
+  C:0003H         LINE#         26
+  C:0003H         LINE#         28
+  C:000CH         LINE#         29
+  C:0020H         LINE#         30
+  -------         ENDPROC       _DELAY
+  -------         PROC          DISPLAY
+  -------         DO            
+  D:0003H         SYMBOL        i
+  -------         ENDDO         
+  C:003FH         LINE#         38
+  C:003FH         LINE#         39
+  C:003FH         LINE#         41
+  C:0041H         LINE#         42
+  C:0041H         LINE#         43
+  C:0048H         LINE#         44
+  C:004FH         LINE#         45
+  C:0053H         LINE#         47
+  -------         ENDPROC       DISPLAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        a
+  -------         ENDDO         
+  C:0021H         LINE#         55
+  C:0021H         LINE#         56
+  C:0021H         LINE#         59
+  C:0021H         LINE#         60
+  C:0021H         LINE#         61
+  C:0027H         LINE#         62
+  C:0027H         LINE#         63
+  C:002AH         LINE#         64
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED6
+
+Program Size: data=11.0 xdata=0 code=103
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

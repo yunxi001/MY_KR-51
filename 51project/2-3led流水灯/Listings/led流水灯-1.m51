@@ -1,0 +1,92 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/06/2023  21:11:49  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\51AND32\51AND32ANZHUANGLUJING\C51\BIN\BL51.EXE .\Objects\led流水灯-1.obj TO .\Objects\led流水灯-1 PRINT (.\Listings\l
+>> ed流水灯-1.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\led流水灯-1.obj (LED_______1)
+  D:\51AND32\51AND32ANZHUANGLUJING\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\led流水灯-1 (LED_______1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000EH     UNIT         ?PR?DELAY500MS?LED_______1
+            CODE    0011H     000CH     UNIT         ?C_C51STARTUP
+            CODE    001DH     0008H     UNIT         ?PR?MAIN?LED_______1
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\led流水灯-1 (LED_______1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED_______1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\led流水灯-1 (LED_______1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED_______1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  C:001DH         PUBLIC        main
+  C:0003H         PUBLIC        Delay500ms
+  -------         PROC          DELAY500MS
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  D:0005H         SYMBOL        k
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/06/2023  21:11:49  PAGE 2
+
+
+  -------         ENDDO         
+  C:0003H         LINE#         3
+  C:0003H         LINE#         4
+  C:0003H         LINE#         7
+  C:0004H         LINE#         8
+  C:0006H         LINE#         9
+  C:0008H         LINE#         10
+  C:000AH         LINE#         12
+  C:000AH         LINE#         14
+  C:000AH         LINE#         15
+  C:000CH         LINE#         16
+  C:000EH         LINE#         17
+  C:0010H         LINE#         18
+  -------         ENDPROC       DELAY500MS
+  -------         PROC          MAIN
+  C:001DH         LINE#         20
+  C:001DH         LINE#         21
+  C:001DH         LINE#         22
+  C:0020H         LINE#         23
+  C:0023H         LINE#         24
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED_______1
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY500MS?LED_______1
+
+Program Size: data=9.0 xdata=0 code=37
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

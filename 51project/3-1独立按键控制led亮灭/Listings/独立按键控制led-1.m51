@@ -1,0 +1,73 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/17/2022  18:54:46  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KR-51\51RG\KEIL5 C51\KEIL51\C51\BIN\BL51.EXE .\Objects\独立按键控制led-1.obj TO .\Objects\独立按键控制led-1 PRINT (.\
+>> Listings\独立按键控制led-1.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\独立按键控制led-1.obj (____________LED_1)
+  D:\KR-51\51RG\KEIL5 C51\KEIL51\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\独立按键控制led-1 (____________LED_1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000CH     UNIT         ?C_C51STARTUP
+            CODE    000FH     0009H     UNIT         ?PR?MAIN?____________LED_1
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\独立按键控制led-1 (____________LED_1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?____________LED_1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\独立按键控制led-1 (____________LED_1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ____________LED_1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:0090H.1       PUBLIC        P1_1
+  B:00B0H.5       PUBLIC        P3_5
+  C:000FH         PUBLIC        main
+  -------         PROC          MAIN
+  C:000FH         LINE#         3
+  C:000FH         LINE#         4
+  C:000FH         LINE#         5
+  C:0012H         LINE#         6
+  C:0012H         LINE#         7
+  C:0014H         LINE#         8
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/17/2022  18:54:46  PAGE 2
+
+
+  C:0015H         LINE#         10
+  C:0015H         LINE#         11
+  C:0017H         LINE#         12
+  C:0017H         LINE#         13
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        ____________LED_1
+
+Program Size: data=9.0 xdata=0 code=24
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

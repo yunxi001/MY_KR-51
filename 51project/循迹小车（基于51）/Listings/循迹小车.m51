@@ -1,0 +1,288 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/04/2023  20:40:09  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KR-51\51RG\KEIL5 C51\KEIL51\C51\BIN\BL51.EXE .\Objects\Delay.obj, .\Objects\Timer0.obj, .\Objects\main.obj, .\Objects
+>> \pwm.obj, .\Objects\infrared.obj TO .\Objects\循迹小车 PRINT (.\Listings\循迹小车.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\Delay.obj (DELAY)
+  .\Objects\Timer0.obj (TIMER0)
+  .\Objects\main.obj (MAIN)
+  .\Objects\pwm.obj (PWM)
+  .\Objects\infrared.obj (INFRARED)
+  D:\KR-51\51RG\KEIL5 C51\KEIL51\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\循迹小车 (DELAY)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0005H     UNIT         ?DT?MAIN
+            DATA    000DH     0005H     UNIT         _DATA_GROUP_
+            IDATA   0012H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     0008H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0052H     UNIT         ?PR?TIMER0_PWM?MAIN
+            CODE    0060H     003EH     UNIT         ?PR?INFRARED?INFRARED
+            CODE    009EH     0030H     UNIT         ?PR?MAIN?MAIN
+            CODE    00CEH     0019H     UNIT         ?PR?_DELAY?DELAY
+            CODE    00E7H     0015H     UNIT         ?PR?TIMER0INIT?TIMER0
+            CODE    00FCH     000FH     UNIT         ?PR?QIANJIN?MAIN
+            CODE    010BH     000FH     UNIT         ?PR?ZUOZHUAN?MAIN
+            CODE    011AH     000FH     UNIT         ?PR?YOUZHUAN?MAIN
+            CODE    0129H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0135H     0009H     UNIT         ?PR?TINGZHI?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\循迹小车 (DELAY)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  000DH    0001H
+  +--> ?PR?TIMER0INIT?TIMER0
+  +--> ?PR?INFRARED?INFRARED
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/04/2023  20:40:09  PAGE 2
+
+
+  +--> ?PR?QIANJIN?MAIN
+  +--> ?PR?YOUZHUAN?MAIN
+  +--> ?PR?ZUOZHUAN?MAIN
+  +--> ?PR?TINGZHI?MAIN
+
+?PR?INFRARED?INFRARED          000EH    0002H
+  +--> ?PR?_DELAY?DELAY
+
+?PR?_DELAY?DELAY               0010H    0002H
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\循迹小车 (DELAY)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:00CEH         PUBLIC        _Delay
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        xms
+  -------         DO            
+  D:0010H         SYMBOL        i
+  D:0011H         SYMBOL        j
+  -------         ENDDO         
+  C:00CEH         LINE#         2
+  C:00CEH         LINE#         3
+  C:00CEH         LINE#         4
+  C:00D2H         LINE#         5
+  C:00D2H         LINE#         8
+  C:00D3H         LINE#         9
+  C:00D6H         LINE#         10
+  C:00D9H         LINE#         12
+  C:00D9H         LINE#         13
+  C:00DCH         LINE#         14
+  C:00DFH         LINE#         15
+  C:00E4H         LINE#         16
+  C:00E6H         LINE#         18
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        TIMER0
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:00A8H.7       PUBLIC        EA
+  D:0089H         PUBLIC        TMOD
+  B:00A8H.1       PUBLIC        ET0
+  B:0088H.5       PUBLIC        TF0
+  C:00E7H         PUBLIC        Timer0Init
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  -------         PROC          TIMER0INIT
+  C:00E7H         LINE#         14
+  C:00E7H         LINE#         15
+  C:00E7H         LINE#         17
+  C:00EAH         LINE#         18
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/04/2023  20:40:09  PAGE 3
+
+
+  C:00EDH         LINE#         19
+  C:00F0H         LINE#         20
+  C:00F3H         LINE#         21
+  C:00F5H         LINE#         22
+  C:00F7H         LINE#         24
+  C:00F9H         LINE#         25
+  C:00FBH         LINE#         27
+  -------         ENDPROC       TIMER0INIT
+  -------         ENDMOD        TIMER0
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0135H         PUBLIC        tingzhi
+  C:011AH         PUBLIC        youzhuan
+  C:010BH         PUBLIC        zuozhuan
+  C:009EH         PUBLIC        main
+  D:0008H         PUBLIC        speed1
+  D:0009H         PUBLIC        speed2
+  D:000AH         PUBLIC        speed3
+  D:000BH         PUBLIC        speed4
+  B:0090H.3       PUBLIC        IN1
+  B:0090H.2       PUBLIC        IN2
+  C:000EH         PUBLIC        Timer0_Pwm
+  B:0090H.1       PUBLIC        IN3
+  B:0090H.0       PUBLIC        IN4
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  D:000CH         PUBLIC        Counter
+  C:00FCH         PUBLIC        qianjin
+  -------         PROC          QIANJIN
+  C:00FCH         LINE#         13
+  C:00FCH         LINE#         14
+  C:00FCH         LINE#         15
+  C:00FEH         LINE#         16
+  C:0100H         LINE#         17
+  C:0102H         LINE#         18
+  C:0104H         LINE#         19
+  C:0107H         LINE#         20
+  C:010AH         LINE#         21
+  -------         ENDPROC       QIANJIN
+  -------         PROC          ZUOZHUAN
+  C:010BH         LINE#         22
+  C:010BH         LINE#         23
+  C:010BH         LINE#         24
+  C:010DH         LINE#         25
+  C:010FH         LINE#         26
+  C:0111H         LINE#         27
+  C:0113H         LINE#         28
+  C:0116H         LINE#         29
+  C:0119H         LINE#         30
+  -------         ENDPROC       ZUOZHUAN
+  -------         PROC          YOUZHUAN
+  C:011AH         LINE#         32
+  C:011AH         LINE#         33
+  C:011AH         LINE#         34
+  C:011CH         LINE#         35
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/04/2023  20:40:09  PAGE 4
+
+
+  C:011EH         LINE#         36
+  C:0120H         LINE#         37
+  C:0122H         LINE#         38
+  C:0125H         LINE#         39
+  C:0128H         LINE#         40
+  -------         ENDPROC       YOUZHUAN
+  -------         PROC          TINGZHI
+  C:0135H         LINE#         42
+  C:0135H         LINE#         43
+  C:0135H         LINE#         44
+  C:0137H         LINE#         45
+  C:0139H         LINE#         46
+  C:013BH         LINE#         47
+  C:013DH         LINE#         48
+  -------         ENDPROC       TINGZHI
+  -------         PROC          MAIN
+  -------         DO            
+  D:000DH         SYMBOL        i
+  -------         ENDDO         
+  C:009EH         LINE#         50
+  C:009EH         LINE#         51
+  C:009EH         LINE#         52
+  C:00A1H         LINE#         53
+  C:00A1H         LINE#         54
+  C:00A1H         LINE#         56
+  C:00A6H         LINE#         57
+  C:00B5H         LINE#         58
+  C:00B5H         LINE#         59
+  C:00BAH         LINE#         60
+  C:00BFH         LINE#         61
+  C:00C4H         LINE#         62
+  C:00C9H         LINE#         63
+  C:00CCH         LINE#         64
+  C:00CCH         LINE#         65
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0_PWM
+  C:000EH         LINE#         68
+  C:0014H         LINE#         70
+  C:0017H         LINE#         71
+  C:001AH         LINE#         72
+  C:001CH         LINE#         73
+  C:0025H         LINE#         74
+  C:002CH         LINE#         75
+  C:0030H         LINE#         77
+  C:0032H         LINE#         79
+  C:0039H         LINE#         80
+  C:003DH         LINE#         82
+  C:003FH         LINE#         84
+  C:0046H         LINE#         85
+  C:004AH         LINE#         87
+  C:004CH         LINE#         89
+  C:0053H         LINE#         90
+  C:0057H         LINE#         92
+  C:0059H         LINE#         93
+  -------         ENDPROC       TIMER0_PWM
+  -------         ENDMOD        MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/04/2023  20:40:09  PAGE 5
+
+
+  -------         MODULE        PWM
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  -------         ENDMOD        PWM
+
+  -------         MODULE        INFRARED
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  B:0090H.7       PUBLIC        hw1
+  B:0090H.6       PUBLIC        hw2
+  B:0090H.5       PUBLIC        hw3
+  C:0060H         PUBLIC        infrared
+  -------         PROC          INFRARED
+  -------         DO            
+  D:000EH         SYMBOL        i
+  -------         ENDDO         
+  C:0060H         LINE#         15
+  C:0060H         LINE#         16
+  C:0060H         LINE#         18
+  C:0060H         LINE#         19
+  C:0060H         LINE#         20
+  C:0067H         LINE#         21
+  C:0070H         LINE#         22
+  C:0070H         LINE#         23
+  C:0075H         LINE#         24
+  C:0075H         LINE#         25
+  C:007BH         LINE#         26
+  C:007BH         LINE#         27
+  C:0081H         LINE#         28
+  C:0081H         LINE#         29
+  C:0087H         LINE#         30
+  C:0087H         LINE#         31
+  C:008DH         LINE#         32
+  C:008DH         LINE#         33
+  C:0093H         LINE#         34
+  C:0093H         LINE#         35
+  C:0099H         LINE#         36
+  C:0099H         LINE#         37
+  C:009DH         LINE#         38
+  C:009DH         LINE#         39
+  -------         ENDPROC       INFRARED
+  -------         ENDMOD        INFRARED
+
+Program Size: data=19.0 xdata=0 code=310
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

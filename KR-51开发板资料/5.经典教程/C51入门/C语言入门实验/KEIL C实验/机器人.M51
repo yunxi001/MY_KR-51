@@ -1,0 +1,322 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/03/2021  20:13:13  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+F:\KEIL_V5\C51\BIN\BL51.EXE 机器人.obj TO 机器人
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  机器人.obj (______)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (PRINTF)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (SCANF)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (SIN)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?CASTF)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPROUND)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCONVERT)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?ATOF)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPSERIES)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPNEG)
+  F:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FTNPWR)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?ISTPTR)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTPTR)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?LLDCODE)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?LLDCODE0)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIDATA)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?PILDIDATA)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (GETCHAR)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (UNGETC)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (ISSPACE)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTIDATA)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTXDATA)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (?C?LSTPDATA)
+  F:\KEIL_V5\C51\LIB\C51S.LIB (_GETKEY)
+
+
+LINK MAP OF MODULE:  机器人 (______)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         ?DT?GETCHAR
+                    0009H     0017H                  *** GAP ***
+            BIT     0020H.0   0001H.3   UNIT         _BIT_GROUP_
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/03/2021  20:13:13  PAGE 2
+
+
+            BIT     0021H.3   0000H.1   UNIT         ?BI?GETCHAR
+                    0021H.4   0000H.4                *** GAP ***
+            DATA    0022H     002DH     UNIT         _DATA_GROUP_
+            IDATA   004FH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     068FH     UNIT         ?C?LIB_CODE
+            CODE    0E8FH     046FH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    12FEH     034FH     UNIT         ?PR?SCANF?SCANF
+            CODE    164DH     016EH     UNIT         ?PR?SIN?SIN
+            CODE    17BBH     00E6H     UNIT         ?PR??C?ATOF??C?ATOF
+            CODE    18A1H     008AH     UNIT         ?PR?MAIN?______
+            CODE    192BH     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    1952H     001EH     UNIT         ?CO?______
+            CODE    1970H     0013H     UNIT         ?PR?_ISSPACE?ISSPACE
+            CODE    1983H     0011H     UNIT         ?PR?GETCHAR?GETCHAR
+            CODE    1994H     000CH     UNIT         ?C_C51STARTUP
+            CODE    19A0H     000AH     UNIT         ?PR?_GETKEY?_GETKEY
+            CODE    19AAH     0005H     UNIT         ?PR?GETCHAR?UNGETCHAR
+
+
+
+OVERLAY MAP OF MODULE:   机器人 (______)
+
+
+SEGMENT                           BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH     START    LENGTH
+------------------------------------------------------------------
+?C_C51STARTUP                  -----    -----      -----    -----
+  +--> ?PR?MAIN?______
+
+?PR?MAIN?______                -----    -----      0022H    000DH
+  +--> ?CO?______
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?SCANF?SCANF
+  +--> ?PR?SIN?SIN
+
+?PR?PRINTF?PRINTF              0020H.0  0001H.1    002FH    001CH
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?SCANF?SCANF                0020H.0  0000H.6    002FH    001EH
+  +--> ?PR?GETCHAR?UNGETCHAR
+  +--> ?PR?_ISSPACE?ISSPACE
+  +--> ?PR?GETCHAR?GETCHAR
+  +--> ?PR??C?ATOF??C?ATOF
+
+?PR?GETCHAR?GETCHAR            -----    -----      -----    -----
+  +--> ?PR?_GETKEY?_GETKEY
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR??C?ATOF??C?ATOF            0020H.6  0000H.5    004DH    0002H
+
+?PR?SIN?SIN                    0020H.0  0000H.1    002FH    0004H
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/03/2021  20:13:13  PAGE 3
+
+
+
+SYMBOL TABLE OF MODULE:  机器人 (______)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ______
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:0098H.1       PUBLIC        TI
+  C:18A1H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  -------         PROC          MAIN
+  -------         DO            
+  D:0022H         SYMBOL        i
+  D:0023H         SYMBOL        x
+  D:0027H         SYMBOL        y
+  D:002BH         SYMBOL        z
+  -------         ENDDO         
+  C:18A1H         LINE#         4
+  C:18A1H         LINE#         5
+  C:18A1H         LINE#         8
+  C:18A4H         LINE#         9
+  C:18A7H         LINE#         10
+  C:18AAH         LINE#         11
+  C:18ADH         LINE#         12
+  C:18AFH         LINE#         13
+  C:18B1H         LINE#         17
+  C:18B1H         LINE#         18
+  C:18B1H         LINE#         20
+  C:18BAH         LINE#         21
+  C:18D5H         LINE#         23
+  C:18D8H         LINE#         24
+  C:18D8H         LINE#         25
+  C:190FH         LINE#         26
+  C:1920H         LINE#         27
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        ______
+
+  -------         MODULE        ?C?FPADD
+  C:0807H         PUBLIC        ?C?FPADD
+  C:0803H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPMUL
+  C:08F8H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:0A01H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FCAST
+  C:0AA8H         PUBLIC        ?C?FCASTC
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/03/2021  20:13:13  PAGE 4
+
+
+  C:0AA3H         PUBLIC        ?C?FCASTI
+  C:0A9EH         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        PRINTF
+  D:002FH         PUBLIC        ?_PRINTF?BYTE
+  D:002FH         PUBLIC        ?_SPRINTF?BYTE
+  C:0EF1H         PUBLIC        _PRINTF
+  C:0EEBH         PUBLIC        _SPRINTF
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        SCANF
+  D:002FH         PUBLIC        ?_SCANF?BYTE
+  D:002FH         PUBLIC        ?_SSCANF?BYTE
+  C:1380H         PUBLIC        _SCANF
+  C:137CH         PUBLIC        _SSCANF
+  -------         ENDMOD        SCANF
+
+  -------         MODULE        SIN
+  C:1695H         PUBLIC        _COS
+  C:16ABH         PUBLIC        _SIN
+  C:16DDH         PUBLIC        _TAN
+  -------         ENDMOD        SIN
+
+  -------         MODULE        ?C?CASTF
+  C:0B26H         PUBLIC        ?C?CASTF
+  -------         ENDMOD        ?C?CASTF
+
+  -------         MODULE        ?C?FPROUND
+  C:0B5DH         PUBLIC        ?C?FPROUND
+  -------         ENDMOD        ?C?FPROUND
+
+  -------         MODULE        ?C?FPCONVERT
+  C:0B8CH         PUBLIC        ?C?FPCONVERT
+  -------         ENDMOD        ?C?FPCONVERT
+
+  -------         MODULE        ?C?FPNEG
+  C:0CDCH         PUBLIC        ?C?FPNEG
+  -------         ENDMOD        ?C?FPNEG
+
+  -------         MODULE        ?C?FTNPWR
+  C:0D1DH         PUBLIC        ?C?FTNPWR
+  -------         ENDMOD        ?C?FTNPWR
+
+  -------         MODULE        ?C?CLDPTR
+  C:0D5DH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0D76H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0DA3H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?ISTPTR
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/03/2021  20:13:13  PAGE 5
+
+
+  C:0DB5H         PUBLIC        ?C?ISTPTR
+  -------         ENDMOD        ?C?ISTPTR
+
+  -------         MODULE        ?C?LNEG
+  C:0DD4H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?LSTPTR
+  C:0DE2H         PUBLIC        ?C?LSTPTR
+  -------         ENDMOD        ?C?LSTPTR
+
+  -------         MODULE        ?C?LLDCODE
+  C:0DFCH         PUBLIC        ?C?LLDCODE
+  -------         ENDMOD        ?C?LLDCODE
+
+  -------         MODULE        ?C?LLDCODE0
+  C:0E0CH         PUBLIC        ?C?LLDCODE0
+  -------         ENDMOD        ?C?LLDCODE0
+
+  -------         MODULE        ?C?PLDIDATA
+  C:0E1CH         PUBLIC        ?C?PLDIDATA
+  -------         ENDMOD        ?C?PLDIDATA
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0E25H         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?PILDIDATA
+  C:0E35H         PUBLIC        ?C?PILDIDATA
+  -------         ENDMOD        ?C?PILDIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0E45H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:192BH         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+  -------         MODULE        GETCHAR
+  B:0021H.3       PUBLIC        ?C?CHARLOADED
+  D:0008H         PUBLIC        ?_UNGETCHAR?BYTE
+  C:1983H         PUBLIC        GETCHAR
+  -------         ENDMOD        GETCHAR
+
+  -------         MODULE        UNGETC
+  C:19AAH         PUBLIC        _UNGETCHAR
+  -------         ENDMOD        UNGETC
+
+  -------         MODULE        ISSPACE
+  C:1970H         PUBLIC        _isspace
+  -------         ENDMOD        ISSPACE
+
+  -------         MODULE        ?C?LSTIDATA
+  C:0E6BH         PUBLIC        ?C?LSTIDATA
+  -------         ENDMOD        ?C?LSTIDATA
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/03/2021  20:13:13  PAGE 6
+
+
+  -------         MODULE        ?C?LSTXDATA
+  C:0E77H         PUBLIC        ?C?LSTXDATA
+  -------         ENDMOD        ?C?LSTXDATA
+
+  -------         MODULE        ?C?LSTPDATA
+  C:0E83H         PUBLIC        ?C?LSTPDATA
+  -------         ENDMOD        ?C?LSTPDATA
+
+  -------         MODULE        _GETKEY
+  C:19A0H         PUBLIC        _GETKEY
+  -------         ENDMOD        _GETKEY
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00A8H BYTE ( 8%) *
+******************************************************************************
+
+Program Size: data=56.4 xdata=0 code=4530
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

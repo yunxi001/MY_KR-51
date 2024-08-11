@@ -1,0 +1,18 @@
+ 
+关于舵机的资料请看这两篇文章：
+ 
+舵机的相关原理与控制原理
+http://www.mcustudio.com.cn/showcourse.asp?id=51
+利用单片机PWM信号进行舵机控制
+http://www.mcustudio.com.cn/showcourse.asp?id=52
+ 
+舵机有三条线定义：
+
+暗灰： GND
+
+红色： VCC 4.8-7.2V
+
+橙黄线： 脉冲输入
+
+
+本程序

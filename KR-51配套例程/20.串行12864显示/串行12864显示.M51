@@ -1,0 +1,266 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/23/2015  22:43:18  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE STARTUP.obj, 串行12864显示.obj TO 串行12864显示 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  串行12864显示.obj (串行12864显示)
+
+
+LINK MAP OF MODULE:  串行12864显示 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         _DATA_GROUP_
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0037H     UNIT         ?PR?_SENDBYTE?串行12864显示
+            CODE    003AH     0035H     UNIT         ?PR?TEST?串行12864显示
+            CODE    006FH     002EH     UNIT         ?CO?串行12864显示
+            CODE    009DH     0027H     UNIT         ?PR?_DELAY?串行12864显示
+            CODE    00C4H     0023H     UNIT         ?PR?_HZKDIS?串行12864显示
+            CODE    00E7H     001FH     UNIT         ?PR?MAIN?串行12864显示
+            CODE    0106H     0018H     UNIT         ?PR?LCDINIT?串行12864显示
+            CODE    011EH     0010H     UNIT         ?PR?_WRITE_COM?串行12864显示
+            CODE    012EH     0010H     UNIT         ?PR?_WRITE_DATA?串行12864显示
+            CODE    013EH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   串行12864显示 (?C_STARTUP)
+
+
+SEGMENT                                 DATA_GROUP 
+  +--> CALLED SEGMENT                 START    LENGTH
+-----------------------------------------------------
+?C_C51STARTUP                         -----    -----
+  +--> ?PR?MAIN?串行12864显示
+
+?PR?MAIN?串行12864显示                -----    -----
+  +--> ?PR?_DELAY?串行12864显示
+  +--> ?PR?LCDINIT?串行12864显示
+  +--> ?PR?TEST?串行12864显示
+
+?PR?_DELAY?串行12864显示              -----    -----
+  +--> ?PR?_WRITE_COM?串行12864显示
+
+?PR?_WRITE_COM?串行12864显示          -----    -----
+  +--> ?PR?_SENDBYTE?串行12864显示
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/23/2015  22:43:18  PAGE 2
+
+
+?PR?LCDINIT?串行12864显示             -----    -----
+  +--> ?PR?_DELAY?串行12864显示
+  +--> ?PR?_WRITE_COM?串行12864显示
+
+?PR?TEST?串行12864显示                -----    -----
+  +--> ?PR?_DELAY?串行12864显示
+  +--> ?PR?_WRITE_COM?串行12864显示
+  +--> ?CO?串行12864显示
+  +--> ?PR?_HZKDIS?串行12864显示
+
+?PR?_HZKDIS?串行12864显示             0008H    0002H
+  +--> ?PR?_WRITE_DATA?串行12864显示
+  +--> ?PR?_DELAY?串行12864显示
+
+?PR?_WRITE_DATA?串行12864显示         -----    -----
+  +--> ?PR?_SENDBYTE?串行12864显示
+  +--> ?PR?_DELAY?串行12864显示
+
+
+
+SYMBOL TABLE OF MODULE:  串行12864显示 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:013EH         SEGMENT       ?C_C51STARTUP
+  I:000AH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0141H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0000H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:013EH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         92
+  C:013EH         LINE#         99
+  C:0140H         LINE#         100
+  C:0141H         LINE#         101
+  C:0142H         LINE#         102
+  C:0144H         LINE#         151
+  C:0147H         LINE#         155
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/23/2015  22:43:18  PAGE 3
+
+
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        串行12864显示
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:00E7H         PUBLIC        Main
+  B:00A0H.3       PUBLIC        CH
+  D:00A8H         PUBLIC        IE
+  C:00C4H         PUBLIC        _hzkdis
+  C:00A4H         PUBLIC        _delay
+  B:00A0H.2       PUBLIC        CS
+  D:00B8H         PUBLIC        IP
+  C:003AH         PUBLIC        Test
+  C:012EH         PUBLIC        _write_data
+  B:00A0H.2       PUBLIC        SCLK
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:011EH         PUBLIC        _write_com
+  B:00A0H.1       PUBLIC        SID
+  C:0012H         PUBLIC        _sendbyte
+  D:00C8H         PUBLIC        T2CON
+  C:0106H         PUBLIC        lcdinit
+  D:00D0H         PUBLIC        PSW
+  C:00A0H         SYMBOL        L?0032
+  -------         PROC          L?0031
+  -------         ENDPROC       L?0031
+  C:00A0H         SYMBOL        L?0032
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:00A4H         LINE#         30
+  C:00A4H         LINE#         31
+  C:00A4H         LINE#         33
+  C:00AEH         LINE#         34
+  C:00C3H         LINE#         35
+  -------         ENDPROC       _DELAY
+  -------         PROC          L?0030
+  -------         ENDPROC       L?0030
+  -------         PROC          _SENDBYTE
+  D:0007H         SYMBOL        zdata
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:0012H         LINE#         43
+  C:0012H         LINE#         44
+  C:0012H         LINE#         46
+  C:0015H         LINE#         47
+  C:0015H         LINE#         48
+  C:0024H         LINE#         49
+  C:0024H         LINE#         50
+  C:0026H         LINE#         51
+  C:0028H         LINE#         53
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/23/2015  22:43:18  PAGE 4
+
+
+  C:0028H         LINE#         54
+  C:002AH         LINE#         55
+  C:002AH         LINE#         56
+  C:002CH         LINE#         57
+  C:002EH         LINE#         58
+  C:0039H         LINE#         59
+  -------         ENDPROC       _SENDBYTE
+  -------         PROC          _WRITE_COM
+  D:0003H         SYMBOL        cmdcode
+  C:011EH         LINE#         67
+  C:0120H         LINE#         68
+  C:0120H         LINE#         69
+  C:0122H         LINE#         70
+  C:0124H         LINE#         71
+  C:0124H         LINE#         72
+  C:0127H         LINE#         73
+  -------         ENDPROC       _WRITE_COM
+  -------         PROC          _WRITE_DATA
+  D:0003H         SYMBOL        Dispdata
+  C:012EH         LINE#         82
+  C:0130H         LINE#         83
+  C:0130H         LINE#         84
+  C:0132H         LINE#         85
+  C:0134H         LINE#         86
+  C:0134H         LINE#         87
+  C:0137H         LINE#         88
+  -------         ENDPROC       _WRITE_DATA
+  -------         PROC          LCDINIT
+  C:0106H         LINE#         97
+  C:0106H         LINE#         98
+  C:0106H         LINE#         102
+  C:010DH         LINE#         103
+  C:010FH         LINE#         104
+  C:0112H         LINE#         105
+  C:0117H         LINE#         106
+  -------         ENDPROC       LCDINIT
+  -------         PROC          _HZKDIS
+  D:0008H         SYMBOL        s
+  C:00C4H         LINE#         115
+  C:00C8H         LINE#         116
+  C:00C8H         LINE#         117
+  C:00D6H         LINE#         118
+  C:00D6H         LINE#         119
+  C:00D9H         LINE#         120
+  C:00E1H         LINE#         121
+  C:00E4H         LINE#         122
+  C:00E6H         LINE#         123
+  -------         ENDPROC       _HZKDIS
+  -------         PROC          TEST
+  C:003AH         LINE#         131
+  C:003AH         LINE#         132
+  C:003AH         LINE#         133
+  C:003CH         LINE#         134
+  C:003FH         LINE#         135
+  C:0044H         LINE#         136
+  C:004BH         LINE#         137
+  C:0050H         LINE#         138
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/23/2015  22:43:18  PAGE 5
+
+
+  C:0057H         LINE#         139
+  C:005CH         LINE#         140
+  C:0063H         LINE#         141
+  C:0068H         LINE#         142
+  -------         ENDPROC       TEST
+  -------         PROC          MAIN
+  C:00E7H         LINE#         152
+  C:00E7H         LINE#         153
+  C:00E7H         LINE#         154
+  C:00E9H         LINE#         155
+  C:00F0H         LINE#         156
+  C:00F3H         LINE#         157
+  C:00FAH         LINE#         158
+  C:00FAH         LINE#         159
+  C:00FAH         LINE#         160
+  C:00FDH         LINE#         161
+  C:0104H         LINE#         162
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        串行12864显示
+
+Program Size: data=11.0 xdata=0 code=330
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

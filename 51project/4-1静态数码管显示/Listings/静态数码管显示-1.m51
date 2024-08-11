@@ -1,0 +1,76 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/10/2023  21:02:14  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\51AND32\ANZHUANWEIZHI\51\C51\BIN\BL51.EXE .\Objects\静态数码管显示-1.obj TO .\Objects\静态数码管显示-1 PRINT (.\Listi
+>> ngs\静态数码管显示-1.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\静态数码管显示-1.obj (_______________1)
+  D:\51AND32\ANZHUANWEIZHI\51\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\静态数码管显示-1 (_______________1)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     000DH     UNIT         ?PR?MAIN?_______________1
+            CODE    0010H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\静态数码管显示-1 (_______________1)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?_______________1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\静态数码管显示-1 (_______________1)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        _______________1
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  B:00A0H.0       PUBLIC        P2_0
+  B:00A0H.1       PUBLIC        P2_1
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  C:0003H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0003H         LINE#         2
+  C:0003H         LINE#         3
+  C:0003H         LINE#         4
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/10/2023  21:02:14  PAGE 2
+
+
+  C:0005H         LINE#         5
+  C:0007H         LINE#         6
+  C:0009H         LINE#         7
+  C:000BH         LINE#         8
+  C:000BH         LINE#         9
+  C:000BH         LINE#         10
+  C:000EH         LINE#         11
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        _______________1
+
+Program Size: data=9.0 xdata=0 code=28
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,165 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/04/2015  16:26:13  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE 滚动显示.obj TO 滚动显示 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  滚动显示.obj (滚禵显示)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  滚动显示 (滚禵显示)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0002H     UNIT         ?DT?滚禵显示
+            IDATA   000AH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0007H     UNIT         ?C_INITSEG
+                    000AH     0001H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    009AH     008BH     UNIT         ?C?LIB_CODE
+            CODE    0125H     0038H     UNIT         ?PR?MAIN?滚禵显示
+            CODE    015DH     001BH     UNIT         ?PR?TIME0_INT?滚禵显示
+            CODE    0178H     0014H     UNIT         ?PR?_DELAY?滚禵显示
+            CODE    018CH     0013H     UNIT         ?CO?滚禵显示
+            CODE    019FH     000FH     UNIT         ?PR?TIME0_INIT?滚禵显示
+
+
+
+OVERLAY MAP OF MODULE:   滚动显示 (滚禵显示)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?滚禵显示
+  +--> ?C_INITSEG
+
+?PR?MAIN?滚禵显示
+  +--> ?PR?TIME0_INIT?滚禵显示
+  +--> ?CO?滚禵显示
+  +--> ?PR?_DELAY?滚禵显示
+
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/04/2015  16:26:13  PAGE 2
+
+
+SYMBOL TABLE OF MODULE:  滚动显示 (滚禵显示)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        滚禵显示
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:0125H         PUBLIC        Main
+  C:018CH         PUBLIC        table
+  C:0197H         PUBLIC        LED_W
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:0008H         PUBLIC        Time_temp
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:019FH         PUBLIC        Time0_Init
+  D:008CH         PUBLIC        TH0
+  C:015DH         PUBLIC        Time0_Int
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  D:0009H         PUBLIC        LED_temp
+  C:0178H         PUBLIC        _Delay
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _DELAY
+  D:0007H         SYMBOL        i
+  -------         DO            
+  D:0005H         SYMBOL        x
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:0178H         LINE#         27
+  C:0178H         LINE#         28
+  C:0178H         LINE#         30
+  C:017FH         LINE#         31
+  C:018BH         LINE#         32
+  -------         ENDPROC       _DELAY
+  -------         PROC          TIME0_INIT
+  C:019FH         LINE#         40
+  C:019FH         LINE#         41
+  C:019FH         LINE#         42
+  C:01A2H         LINE#         43
+  C:01A5H         LINE#         44
+  C:01A8H         LINE#         45
+  C:01ABH         LINE#         46
+  C:01ADH         LINE#         47
+  -------         ENDPROC       TIME0_INIT
+  -------         PROC          TIME0_INT
+  C:015DH         LINE#         55
+  C:0161H         LINE#         57
+  C:0164H         LINE#         58
+  C:0167H         LINE#         59
+  C:0169H         LINE#         60
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/04/2015  16:26:13  PAGE 3
+
+
+  C:016EH         LINE#         61
+  C:016EH         LINE#         62
+  C:0170H         LINE#         63
+  C:0173H         LINE#         64
+  C:0173H         LINE#         65
+  -------         ENDPROC       TIME0_INT
+  -------         PROC          MAIN
+  -------         DO            
+  D:0003H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:0125H         LINE#         73
+  C:0125H         LINE#         74
+  C:0125H         LINE#         75
+  C:0128H         LINE#         76
+  C:012BH         LINE#         77
+  C:012BH         LINE#         78
+  C:012BH         LINE#         79
+  C:0147H         LINE#         80
+  C:014EH         LINE#         81
+  C:0153H         LINE#         82
+  C:0154H         LINE#         83
+  C:0155H         LINE#         84
+  C:0158H         LINE#         85
+  C:0158H         LINE#         86
+  C:015AH         LINE#         87
+  C:015BH         LINE#         88
+  C:015BH         LINE#         89
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        滚禵显示
+
+  -------         MODULE        ?C?SIDIV
+  C:009AH         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?UIDIV
+  C:00D0H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+Program Size: data=11.0 xdata=0 code=429
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

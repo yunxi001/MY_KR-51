@@ -1,0 +1,169 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/23/2015  13:32:20  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE Õ‚≤ø÷–∂œµƒ π”√.obj TO Õ‚≤ø÷–∂œµƒ π”√ RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  Õ‚≤ø÷–∂œµƒ π”√.obj (Õ_≤ø_–∂œµƒ π”√)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  Õ‚≤ø÷–∂œµƒ π”√ (Õ_≤ø_–∂œµƒ π”√)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            REG     0008H     0008H     ABSOLUTE     "REG BANK 1"
+            DATA    0010H     0001H     UNIT         ?DT?Õ_≤ø_–∂œµƒ π”√
+            IDATA   0011H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     000BH     UNIT         ?PR?OUTSIDE_INIT?Õ_≤ø_–∂œµƒ π”√
+                    0011H     0002H                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+            CODE    0016H     008CH     UNIT         ?C_C51STARTUP
+            CODE    00A2H     0027H     UNIT         ?PR?_DELAY?Õ_≤ø_–∂œµƒ π”√
+            CODE    00C9H     001FH     UNIT         ?PR?OUTSIDE_INT1?Õ_≤ø_–∂œµƒ π”√
+            CODE    00E8H     001EH     UNIT         ?PR?MAIN?Õ_≤ø_–∂œµƒ π”√
+            CODE    0106H     001CH     UNIT         ?PR?OUTSIDE_INT2?Õ_≤ø_–∂œµƒ π”√
+            CODE    0122H     000BH     UNIT         ?CO?Õ_≤ø_–∂œµƒ π”√
+            CODE    012DH     0004H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   Õ‚≤ø÷–∂œµƒ π”√ (Õ_≤ø_–∂œµƒ π”√)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?OUTSIDE_INT1?Õ_≤ø_–∂œµƒ π”√
+  +--> ?PR?_DELAY?Õ_≤ø_–∂œµƒ π”√
+
+*** NEW ROOT ***************************************************
+
+?PR?OUTSIDE_INT2?Õ_≤ø_–∂œµƒ π”√
+  +--> ?PR?_DELAY?Õ_≤ø_–∂œµƒ π”√
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/23/2015  13:32:20  PAGE 2
+
+
+  +--> ?PR?MAIN?Õ_≤ø_–∂œµƒ π”√
+  +--> ?C_INITSEG
+
+?PR?MAIN?Õ_≤ø_–∂œµƒ π”√
+  +--> ?PR?OUTSIDE_INIT?Õ_≤ø_–∂œµƒ π”√
+  +--> ?CO?Õ_≤ø_–∂œµƒ π”√
+  +--> ?PR?_DELAY?Õ_≤ø_–∂œµƒ π”√
+
+
+
+SYMBOL TABLE OF MODULE:  Õ‚≤ø÷–∂œµƒ π”√ (Õ_≤ø_–∂œµƒ π”√)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        Õ_≤ø_–∂œµƒ π”√
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  C:00E8H         PUBLIC        Main
+  C:0122H         PUBLIC        table
+  D:0010H         PUBLIC        Count
+  D:00A8H         PUBLIC        IE
+  B:00A0H.0       PUBLIC        P2_0
+  B:00A0H.1       PUBLIC        P2_1
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  D:00B8H         PUBLIC        IP
+  C:00C9H         PUBLIC        Outside_Int1
+  C:0106H         PUBLIC        Outside_Int2
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  B:00A8H.2       PUBLIC        EX1
+  B:0088H.2       PUBLIC        IT1
+  C:0006H         PUBLIC        Outside_Init
+  D:00C8H         PUBLIC        T2CON
+  C:00A9H         PUBLIC        _Delay
+  D:00D0H         PUBLIC        PSW
+  C:00A5H         SYMBOL        L?0019
+  -------         PROC          L?0018
+  -------         ENDPROC       L?0018
+  C:00A5H         SYMBOL        L?0019
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        del
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:00A9H         LINE#         42
+  C:00A9H         LINE#         43
+  C:00A9H         LINE#         45
+  C:00B3H         LINE#         46
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/23/2015  13:32:20  PAGE 3
+
+
+  C:00C8H         LINE#         48
+  -------         ENDPROC       _DELAY
+  -------         PROC          OUTSIDE_INIT
+  C:0006H         LINE#         56
+  C:0006H         LINE#         57
+  C:0006H         LINE#         58
+  C:0008H         LINE#         59
+  C:000AH         LINE#         61
+  C:000CH         LINE#         62
+  C:000EH         LINE#         64
+  C:0010H         LINE#         65
+  -------         ENDPROC       OUTSIDE_INIT
+  -------         PROC          OUTSIDE_INT1
+  C:00C9H         LINE#         73
+  C:00CDH         LINE#         75
+  C:00D0H         LINE#         76
+  C:00D7H         LINE#         77
+  C:00DAH         LINE#         78
+  C:00DCH         LINE#         79
+  C:00E3H         LINE#         80
+  -------         ENDPROC       OUTSIDE_INT1
+  -------         PROC          OUTSIDE_INT2
+  C:0106H         LINE#         87
+  C:010AH         LINE#         89
+  C:010DH         LINE#         90
+  C:0111H         LINE#         91
+  C:0114H         LINE#         92
+  C:0116H         LINE#         93
+  C:011DH         LINE#         94
+  -------         ENDPROC       OUTSIDE_INT2
+  -------         PROC          MAIN
+  C:00E8H         LINE#         101
+  C:00E8H         LINE#         102
+  C:00E8H         LINE#         103
+  C:00EBH         LINE#         104
+  C:00F3H         LINE#         105
+  C:00F3H         LINE#         106
+  C:00F3H         LINE#         107
+  C:0101H         LINE#         108
+  C:0104H         LINE#         109
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        Õ_≤ø_–∂œµƒ π”√
+
+Program Size: data=18.0 xdata=0 code=303
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

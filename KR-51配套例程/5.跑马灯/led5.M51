@@ -1,0 +1,92 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/04/2015  15:25:33  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE LED5.obj TO led5 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  LED5.obj (LED5)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  led5 (LED5)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0019H     UNIT         ?PR?MAIN?LED5
+            CODE    001CH     0012H     UNIT         ?PR?_DELAYMS?LED5
+            CODE    002EH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   led5 (LED5)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED5
+
+?PR?MAIN?LED5
+  +--> ?PR?_DELAYMS?LED5
+
+
+
+SYMBOL TABLE OF MODULE:  led5 (LED5)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        LED5
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0003H         PUBLIC        main
+  C:001CH         PUBLIC        _delayms
+  -------         PROC          _DELAYMS
+  D:0007H         SYMBOL        ms
+  -------         DO            
+  D:0006H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/04/2015  15:25:33  PAGE 2
+
+
+  -------         ENDDO         
+  C:001CH         LINE#         19
+  C:001CH         LINE#         20
+  C:001CH         LINE#         22
+  C:0022H         LINE#         23
+  C:0022H         LINE#         24
+  C:002DH         LINE#         25
+  C:002DH         LINE#         26
+  -------         ENDPROC       _DELAYMS
+  -------         PROC          MAIN
+  -------         DO            
+  D:0004H         SYMBOL        LED
+  -------         ENDDO         
+  C:0003H         LINE#         32
+  C:0003H         LINE#         33
+  C:0003H         LINE#         35
+  C:0005H         LINE#         36
+  C:0007H         LINE#         37
+  C:0007H         LINE#         38
+  C:0007H         LINE#         39
+  C:000CH         LINE#         40
+  C:0018H         LINE#         41
+  C:001AH         LINE#         42
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED5
+
+Program Size: data=9.0 xdata=0 code=58
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
